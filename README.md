@@ -1,12 +1,14 @@
 # Blog Taxonomy
 
-Taxonomy extension for [Winter Blog](https://octobercms.com/plugin/winter-blog) plugin.
+Taxonomy extension for [Winter Blog](https://github.com/wintercms/wn-blog-plugin) plugin.
 
-[![GitHub tag](https://img.shields.io/github/tag/ginopane/oc-blogtaxonomy-plugin.svg)](https://github.com/GinoPane/oc-blogtaxonomy-plugin)
-[![Maintainability](https://api.codeclimate.com/v1/badges/60ecdc5d75bb0e490049/maintainability)](https://codeclimate.com/github/GinoPane/oc-blogtaxonomy-plugin/maintainability)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GinoPane/oc-blogtaxonomy-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GinoPane/oc-blogtaxonomy-plugin/?branch=master)
+[![GitHub tag](https://img.shields.io/github/tag/ginopane/wn-blogtaxonomy-plugin.svg)](https://github.com/GinoPane/wn-blogtaxonomy-plugin)
+[![Maintainability](https://api.codeclimate.com/v1/badges/60ecdc5d75bb0e490049/maintainability)](https://codeclimate.com/github/GinoPane/wn-blogtaxonomy-plugin/maintainability)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GinoPane/wn-blogtaxonomy-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GinoPane/wn-blogtaxonomy-plugin/?branch=master)
 
 ## Table of Contents
+* [Installation](#installation)
+  * [Composer](#composer)
 * [Changes to Original Blog Plugin](#changes-to-original-blog-plugin)
   * [Categories](#categories) 
   * [Tags](#tags)
@@ -26,6 +28,16 @@ Taxonomy extension for [Winter Blog](https://octobercms.com/plugin/winter-blog) 
 Inspired by [Blog Tags Extension](https://octobercms.com/plugin/bedard-blogtags) and [Blog Series](https://octobercms.com/plugin/pkleindienst-blogseries)
 plugins Blog Taxonomy adds both tags and series functionality in a high quality and reliable way. Every post could belong
 to a single series and at the same time it can have multiple tags assigned.
+
+## Installation
+
+### Composer
+
+The plugin can be installed via Composer. 
+
+```shell
+composer require ginopane/wn-blogtaxonomy-plugin
+```
 
 ## Changes to Original Blog Plugin
 
@@ -63,7 +75,8 @@ Starting from 1.5.0 version Blog Taxonomy supports [Winter Translate](https://oc
 
 ## Migration from Other Plugins
 
-Starting from 1.12.0 version Blog Taxonomy supports migration from other plugins. Currently supported plugins are: [BlogSeries](https://github.com/PascalKleindienst/october-blogseries-extension).
+Starting from 1.12.0 version Blog Taxonomy supports migration from other plugins. Supported plugins are: [BlogSeries]
+(https://github.com/PascalKleindienst/october-blogseries-extension).
 
 The migration is done via console command:
 
