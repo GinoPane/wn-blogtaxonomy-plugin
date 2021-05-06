@@ -5,7 +5,7 @@ namespace GinoPane\BlogTaxonomy\Components;
 use Cms\Classes\Page;
 use GinoPane\BlogTaxonomy\Plugin;
 use GinoPane\BlogTaxonomy\Models\Tag;
-use October\Rain\Database\Collection;
+use Winter\Storm\Database\Collection;
 use GinoPane\BlogTaxonomy\Classes\ComponentAbstract;
 use GinoPane\BlogTaxonomy\Classes\TranslateArrayTrait;
 use GinoPane\BlogTaxonomy\Classes\PostListFiltersTrait;

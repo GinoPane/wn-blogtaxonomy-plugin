@@ -76,7 +76,7 @@ Types of changes
 ## 2.3.1 - 2020-08-21
 
 ### Fixed
-* Fixed post URLs broken by Rainlab Blog 1.4.3
+* Fixed post URLs broken by Winter Blog 1.4.3
 
 ## 2.3.0 - 2020-06-11
 

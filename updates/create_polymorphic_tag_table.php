@@ -3,11 +3,11 @@
 namespace GinoPane\BlogTaxonomy\Updates;
 
 use Schema;
-use RainLab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use System\Classes\PluginManager;
 use Illuminate\Support\Facades\DB;
 use GinoPane\BlogTaxonomy\Models\Tag;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
 /**
  * Class CreatePolymorphicTagTable
@@ -21,7 +21,7 @@ class CreatePolymorphicTagTable extends Migration
      */
     public function up()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->createTaggablesTable();
         }
     }
@@ -31,7 +31,7 @@ class CreatePolymorphicTagTable extends Migration
      */
     public function down()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->dropTaggablesTable();
         }
     }

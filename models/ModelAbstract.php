@@ -5,8 +5,8 @@ namespace GinoPane\BlogTaxonomy\Models;
 use Db;
 use Model;
 use Cms\Classes\Controller;
-use October\Rain\Database\Builder;
-use October\Rain\Database\Relations\HasMany;
+use Winter\Storm\Database\Builder;
+use Winter\Storm\Database\Relations\HasMany;
 use GinoPane\BlogTaxonomy\Classes\PostListFiltersTrait;
 
 /**
@@ -91,7 +91,7 @@ abstract class ModelAbstract extends Model
      */
     public static function whereTranslatableProperty(Builder $query, string $property, $value)
     {
-        $query->getModel()->isClassExtendedWith('RainLab.Translate.Behaviors.TranslatableModel')
+        $query->getModel()->isClassExtendedWith('Winter.Translate.Behaviors.TranslatableModel')
             ? $query->transWhere($property, $value)
             : $query->where($property, $value);
     }

@@ -6,16 +6,16 @@ noRecordsMessage: ginopane.blogtaxonomy::lang.form.post_types.no_posts_with_type
 
 columns:
     title:
-        label: rainlab.blog::lang.post.title
+        label: winter.blog::lang.post.title
         sortable: true
         searchable: true
 
     published_at:
-        label: rainlab.blog::lang.post.published
+        label: winter.blog::lang.post.published
         sortable: true
         type: date
 
     created_at:
-        label: rainlab.blog::lang.post.created
+        label: winter.blog::lang.post.created
         type: date
         sortable: true

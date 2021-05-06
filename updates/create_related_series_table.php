@@ -5,7 +5,7 @@ namespace GinoPane\BlogTaxonomy\Updates;
 use Schema;
 use System\Classes\PluginManager;
 use GinoPane\BlogTaxonomy\Models\Series;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
 /**
  * Class CreateRelatedSeriesTable
@@ -19,7 +19,7 @@ class CreateRelatedSeriesTable extends Migration
      */
     public function up()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->createRelation();
         }
     }
@@ -29,7 +29,7 @@ class CreateRelatedSeriesTable extends Migration
      */
     public function down()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->dropRelation();
         }
     }

@@ -3,11 +3,11 @@
 namespace GinoPane\BlogTaxonomy\Models;
 
 use System\Models\File;
-use RainLab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use GinoPane\BlogTaxonomy\Plugin;
-use October\Rain\Database\Builder;
-use October\Rain\Database\Traits\Sluggable;
-use October\Rain\Database\Traits\Validation;
+use Winter\Storm\Database\Builder;
+use Winter\Storm\Database\Traits\Sluggable;
+use Winter\Storm\Database\Traits\Validation;
 
 /**
  * Class Series
@@ -44,7 +44,7 @@ class Series extends ModelAbstract
      *
      * @var array
      */
-    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+    public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
 
     /**
      * Translatable properties, indexed property will be available in queries

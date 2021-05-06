@@ -4,10 +4,10 @@ namespace GinoPane\BlogTaxonomy\Components;
 
 use DB;
 use Cms\Classes\Page;
-use RainLab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use GinoPane\BlogTaxonomy\Plugin;
 use GinoPane\BlogTaxonomy\Models\Tag;
-use October\Rain\Database\Collection;
+use Winter\Storm\Database\Collection;
 use GinoPane\BlogTaxonomy\Models\ModelAbstract;
 use GinoPane\BlogTaxonomy\Classes\PostListAbstract;
 use GinoPane\BlogTaxonomy\Classes\ComponentAbstract;
@@ -91,8 +91,8 @@ class RelatedPosts extends ComponentAbstract
             ],
 
             'orderBy' => [
-                'title'       => 'rainlab.blog::lang.settings.posts_order',
-                'description' => 'rainlab.blog::lang.settings.posts_order_description',
+                'title'       => 'winter.blog::lang.settings.posts_order',
+                'description' => 'winter.blog::lang.settings.posts_order_description',
                 'type'        => 'dropdown',
                 'default'     => 'published_at asc',
                 'showExternalParam' => false
@@ -100,8 +100,8 @@ class RelatedPosts extends ComponentAbstract
 
             'postPage' => [
                 'group'       => Plugin::LOCALIZATION_KEY . 'components.related_posts.links_group',
-                'title'       => 'rainlab.blog::lang.settings.posts_post',
-                'description' => 'rainlab.blog::lang.settings.posts_description',
+                'title'       => 'winter.blog::lang.settings.posts_post',
+                'description' => 'winter.blog::lang.settings.posts_description',
                 'type'        => 'dropdown',
                 'default'     => 'blog/post',
             ],
@@ -214,7 +214,7 @@ class RelatedPosts extends ComponentAbstract
                                 select count(*)
                                 from `%1$s`
                                 where
-                                `%1$s`.`%2$s_type` = \'RainLab\Blog\Models\Post\'
+                                `%1$s`.`%2$s_type` = \'Winter\Blog\Models\Post\'
                                 and `%1$s`.`%2$s_id` = `rainlab_blog_posts`.`id`
                                 and `%1$s`.`tag_id` in (\'%3$s\')
                             )',

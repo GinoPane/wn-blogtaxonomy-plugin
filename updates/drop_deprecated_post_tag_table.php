@@ -4,7 +4,7 @@ namespace GinoPane\BlogTaxonomy\Updates;
 
 use Schema;
 use GinoPane\BlogTaxonomy\Models\Tag;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
 /**
  * Class DropDeprecatedPostTagTable

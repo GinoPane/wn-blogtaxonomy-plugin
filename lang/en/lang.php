@@ -6,7 +6,7 @@ return [
     // plugin
     'plugin' => [
         'name' => 'Blog Taxonomy',
-        'description' => 'Adds tags and series management for RainLab Blog posts',
+        'description' => 'Adds tags and series management for Winter Blog posts',
     ],
 
     //settings

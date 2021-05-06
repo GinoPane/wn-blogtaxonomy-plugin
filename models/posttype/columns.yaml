@@ -22,10 +22,10 @@ columns:
         useRelationCount: true
 
     created_at:
-        label: rainlab.blog::lang.post.created
+        label: winter.blog::lang.post.created
         type: date
 
     updated_at:
-        label: rainlab.blog::lang.post.updated
+        label: winter.blog::lang.post.updated
         type: date
         invisible: true

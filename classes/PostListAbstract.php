@@ -4,9 +4,9 @@ namespace GinoPane\BlogTaxonomy\Classes;
 
 use Cms\Classes\Page;
 use Illuminate\Http\Response;
-use Rainlab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use GinoPane\BlogTaxonomy\Plugin;
-use October\Rain\Database\Builder;
+use Winter\Storm\Database\Builder;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Database\Eloquent\Collection;
@@ -75,8 +75,8 @@ abstract class PostListAbstract extends ComponentAbstract
     {
         $properties = [
             'orderBy' => [
-                'title'       => 'rainlab.blog::lang.settings.posts_order',
-                'description' => 'rainlab.blog::lang.settings.posts_order_description',
+                'title'       => 'winter.blog::lang.settings.posts_order',
+                'description' => 'winter.blog::lang.settings.posts_order_description',
                 'type'        => 'dropdown',
                 'default'     => 'published_at asc',
                 'showExternalParam' => false
@@ -218,16 +218,16 @@ abstract class PostListAbstract extends ComponentAbstract
         return [
             'postPage' => [
                 'group'       => Plugin::LOCALIZATION_KEY . 'components.post_list_abstract.links_group',
-                'title'       => 'rainlab.blog::lang.settings.posts_post',
-                'description' => 'rainlab.blog::lang.settings.posts_description',
+                'title'       => 'winter.blog::lang.settings.posts_post',
+                'description' => 'winter.blog::lang.settings.posts_description',
                 'type'        => 'dropdown',
                 'default'     => 'blog/post',
                 'showExternalParam' => false,
             ],
             'categoryPage' => [
                 'group'       => Plugin::LOCALIZATION_KEY . 'components.post_list_abstract.links_group',
-                'title'       => 'rainlab.blog::lang.settings.posts_category',
-                'description' => 'rainlab.blog::lang.settings.posts_category_description',
+                'title'       => 'winter.blog::lang.settings.posts_category',
+                'description' => 'winter.blog::lang.settings.posts_category_description',
                 'type'        => 'dropdown',
                 'default'     => 'blog/category',
                 'showExternalParam' => false,

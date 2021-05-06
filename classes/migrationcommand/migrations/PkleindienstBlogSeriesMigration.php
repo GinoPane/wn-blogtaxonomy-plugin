@@ -4,9 +4,9 @@ namespace GinoPane\BlogTaxonomy\Classes\MigrationCommand\Migrations;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use October\Rain\Database\Collection;
-use October\Rain\Support\Facades\Schema;
-use October\Rain\Database\ModelException;
+use Winter\Storm\Database\Collection;
+use Winter\Storm\Support\Facades\Schema;
+use Winter\Storm\Database\ModelException;
 use PKleindienst\BlogSeries\Models\Series;
 use GinoPane\BlogTaxonomy\Models\Series as BlogTaxonomySeries;
 use GinoPane\BlogTaxonomy\Classes\MigrationCommand\Exceptions\NoDataException;

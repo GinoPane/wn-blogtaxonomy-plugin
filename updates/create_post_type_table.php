@@ -7,7 +7,7 @@ use Schema;
 use Carbon\Carbon;
 use System\Classes\PluginManager;
 use GinoPane\BlogTaxonomy\Models\PostType;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
 /**
  * Class CreatePostTypeTable
@@ -56,7 +56,7 @@ class CreatePostTypeTable extends Migration
      */
     public function up()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->createPostTypes();
         }
     }
@@ -66,7 +66,7 @@ class CreatePostTypeTable extends Migration
      */
     public function down()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->dropPostTypes();
         }
     }

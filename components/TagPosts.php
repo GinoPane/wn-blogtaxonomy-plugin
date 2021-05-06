@@ -2,7 +2,7 @@
 
 namespace GinoPane\BlogTaxonomy\Components;
 
-use Rainlab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use GinoPane\BlogTaxonomy\Plugin;
 use GinoPane\BlogTaxonomy\Models\Tag;
 use GinoPane\BlogTaxonomy\Classes\PostListAbstract;

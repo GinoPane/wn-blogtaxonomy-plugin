@@ -79,8 +79,8 @@ class SeriesNavigation extends ComponentAbstract
                 'group'       => Plugin::LOCALIZATION_KEY . 'components.series_navigation.links_group',
             ],
             'postPage' => [
-                'title'       => 'rainlab.blog::lang.settings.posts_post',
-                'description' => 'rainlab.blog::lang.settings.posts_post_description',
+                'title'       => 'winter.blog::lang.settings.posts_post',
+                'description' => 'winter.blog::lang.settings.posts_post_description',
                 'type'        => 'dropdown',
                 'default'     => 'blog/post',
                 'group'       => Plugin::LOCALIZATION_KEY . 'components.series_navigation.links_group',

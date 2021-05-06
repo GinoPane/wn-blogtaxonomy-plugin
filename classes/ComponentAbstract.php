@@ -6,10 +6,10 @@ use ArrayAccess;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use Cms\Classes\Controller;
-use RainLab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use Cms\Classes\ComponentBase;
-use RainLab\Blog\Models\Category;
-use October\Rain\Database\Collection;
+use Winter\Blog\Models\Category;
+use Winter\Storm\Database\Collection;
 
 /**
  * Class ComponentAbstract

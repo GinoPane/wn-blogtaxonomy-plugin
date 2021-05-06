@@ -2,34 +2,34 @@
 
 namespace GinoPane\BlogTaxonomy;
 
-use Event;
-use Input;
-use Backend;
 use Exception;
-use Validator;
 use System\Models\File;
 use Backend\Widgets\Form;
 use Backend\Widgets\Lists;
 use Backend\Widgets\Filter;
+use Backend\Facades\Backend;
 use System\Classes\PluginBase;
 use Backend\Classes\Controller;
 use GinoPane\BlogTaxonomy\Models\Tag;
+use Winter\Storm\Validation\Validator;
+use Winter\Storm\Support\Facades\Input;
+use Winter\Storm\Support\Facades\Event;
 use GinoPane\BlogTaxonomy\Models\Series;
+use Winter\Blog\Models\Post as PostModel;
 use Backend\Behaviors\RelationController;
-use RainLab\Blog\Models\Post as PostModel;
 use GinoPane\BlogTaxonomy\Models\Settings;
 use GinoPane\BlogTaxonomy\Models\PostType;
 use GinoPane\BlogTaxonomy\Components\TagList;
 use GinoPane\BlogTaxonomy\Components\TagPosts;
 use GinoPane\BlogTaxonomy\Components\SeriesList;
+use Winter\Blog\Models\Category as CategoryModel;
 use GinoPane\BlogTaxonomy\Components\SeriesPosts;
-use RainLab\Blog\Models\Category as CategoryModel;
 use GinoPane\BlogTaxonomy\Components\RelatedPosts;
 use GinoPane\BlogTaxonomy\Components\RelatedSeries;
 use GinoPane\BlogTaxonomy\Console\MigrateFromPlugin;
-use RainLab\Blog\Controllers\Posts as PostsController;
+use Winter\Blog\Controllers\Posts as PostsController;
 use GinoPane\BlogTaxonomy\Components\SeriesNavigation;
-use RainLab\Blog\Controllers\Categories as CategoriesController;
+use Winter\Blog\Controllers\Categories as CategoriesController;
 
 /**
  * Class Plugin
@@ -42,15 +42,15 @@ class Plugin extends PluginBase
 
     const DIRECTORY_KEY = 'ginopane/blogtaxonomy';
 
-    const REQUIRED_PLUGIN_RAINLAB_BLOG = 'RainLab.Blog';
+    const REQUIRED_PLUGIN_RAINLAB_BLOG = 'Winter.Blog';
 
     const DEFAULT_ICON = 'icon-sitemap';
 
     /**
-     * @var array   Require the RainLab.Blog plugin
+     * @var array   Require the Winter.Blog plugin
      */
     public $require = [
-        'RainLab.Blog'
+        'Winter.Blog'
     ];
 
     /**
@@ -185,7 +185,7 @@ class Plugin extends PluginBase
     }
 
     /**
-     * Extend RainLab Post model
+     * Extend Winter Post model
      * - add tags relation
      * - add series relation
      * - add post type relation
@@ -413,11 +413,7 @@ class Plugin extends PluginBase
 
                 $fieldData = array_column($repeaterData, $fieldName);
 
-                if (count(array_unique($fieldData)) !== count($fieldData)) {
-                    return false;
-                }
-
-                return true;
+                return !(count(array_unique($fieldData)) !== count($fieldData));
             });
         }
     }
@@ -428,8 +424,8 @@ class Plugin extends PluginBase
         $categoriesConfig['tab'] = $tab;
         $categoriesConfig['mode'] = 'relation';
         $categoriesConfig['type'] = 'taglist';
-        $categoriesConfig['label'] = 'rainlab.blog::lang.post.tab_categories';
-        $categoriesConfig['comment'] = "rainlab.blog::lang.post.categories_comment";
+        $categoriesConfig['label'] = 'winter.blog::lang.post.tab_categories';
+        $categoriesConfig['comment'] = "winter.blog::lang.post.categories_comment";
         $categoriesConfig['placeholder'] = self::LOCALIZATION_KEY . 'placeholders.categories';
         unset($categoriesConfig['commentAbove']);
 

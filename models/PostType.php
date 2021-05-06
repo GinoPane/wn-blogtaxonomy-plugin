@@ -3,10 +3,10 @@
 namespace GinoPane\BlogTaxonomy\Models;
 
 use Model;
-use RainLab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use GinoPane\BlogTaxonomy\Plugin;
-use October\Rain\Database\Traits\Sluggable;
-use October\Rain\Database\Traits\Validation;
+use Winter\Storm\Database\Traits\Sluggable;
+use Winter\Storm\Database\Traits\Validation;
 
 /**
  * Class PostType
@@ -41,7 +41,7 @@ class PostType extends Model
      *
      * @var array
      */
-    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+    public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
 
     /**
      * @var array Attributes to be stored as JSON

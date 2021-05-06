@@ -1,6 +1,6 @@
 # Blog Taxonomy
 
-Taxonomy extension for [RainLab Blog](https://octobercms.com/plugin/rainlab-blog) plugin.
+Taxonomy extension for [Winter Blog](https://octobercms.com/plugin/winter-blog) plugin.
 
 [![GitHub tag](https://img.shields.io/github/tag/ginopane/oc-blogtaxonomy-plugin.svg)](https://github.com/GinoPane/oc-blogtaxonomy-plugin)
 [![Maintainability](https://api.codeclimate.com/v1/badges/60ecdc5d75bb0e490049/maintainability)](https://codeclimate.com/github/GinoPane/oc-blogtaxonomy-plugin/maintainability)
@@ -59,7 +59,7 @@ properties which are added as additional form inputs when a specific type is cho
 
 ## Translate Plugin Support
 
-Starting from 1.5.0 version Blog Taxonomy supports [RainLab Translate](https://octobercms.com/plugin/rainlab-translate) plugin when it's installed. All tag and series fields could be translated.
+Starting from 1.5.0 version Blog Taxonomy supports [Winter Translate](https://octobercms.com/plugin/winter-translate) plugin when it's installed. All tag and series fields could be translated.
 
 ## Migration from Other Plugins
 

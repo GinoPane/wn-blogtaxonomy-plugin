@@ -6,7 +6,7 @@ use GinoPane\BlogTaxonomy\Models\Series;
 use Schema;
 use System\Classes\PluginManager;
 use GinoPane\BlogTaxonomy\Models\Tag;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
 /**
  * Class CreateTaxonomiesTables
@@ -20,7 +20,7 @@ class CreateTaxonomiesTables extends Migration
      */
     public function up()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->createTags();
 
             $this->createSeries();
@@ -32,7 +32,7 @@ class CreateTaxonomiesTables extends Migration
      */
     public function down()
     {
-        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+        if (PluginManager::instance()->hasPlugin('Winter.Blog')) {
             $this->dropTags();
 
             $this->dropSeries();

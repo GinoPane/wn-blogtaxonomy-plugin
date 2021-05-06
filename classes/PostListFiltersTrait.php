@@ -3,7 +3,7 @@
 namespace GinoPane\BlogTaxonomy\Classes;
 
 use GinoPane\BlogTaxonomy\Plugin;
-use October\Rain\Database\Builder;
+use Winter\Storm\Database\Builder;
 
 /**
  * Class PostListFiltersTrait
