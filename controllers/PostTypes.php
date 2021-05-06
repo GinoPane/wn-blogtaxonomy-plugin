@@ -40,7 +40,7 @@ class PostTypes extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext(Plugin::REQUIRED_PLUGIN_RAINLAB_BLOG, 'blog', 'post_types');
+        BackendMenu::setContext(Plugin::REQUIRED_PLUGIN_WINTER_BLOG, 'blog', 'post_types');
     }
 
     /**

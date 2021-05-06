@@ -2,6 +2,9 @@
 
 Taxonomy extension for [Winter Blog](https://github.com/wintercms/wn-blog-plugin) plugin.
 
+> Derived from 3.0.5 version of [Blog Taxonomy](https://github.com/GinoPane/oc-blogtaxonomy-plugin) plugin for 
+> October CMS
+
 [![GitHub tag](https://img.shields.io/github/tag/ginopane/wn-blogtaxonomy-plugin.svg)](https://github.com/GinoPane/wn-blogtaxonomy-plugin)
 [![Maintainability](https://api.codeclimate.com/v1/badges/60ecdc5d75bb0e490049/maintainability)](https://codeclimate.com/github/GinoPane/wn-blogtaxonomy-plugin/maintainability)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GinoPane/wn-blogtaxonomy-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GinoPane/wn-blogtaxonomy-plugin/?branch=master)
@@ -15,7 +18,6 @@ Taxonomy extension for [Winter Blog](https://github.com/wintercms/wn-blog-plugin
   * [Series](#series)
   * [Types](#types)
 * [Translate Plugin Support](#translate-plugin-support)
-* [Migration from Other Plugins](#migration-from-other-plugins)
 * [Implementing Frontend Pages](#implementing-frontend-pages)
   * [Post Series Navigation](#post-series-navigation)
   * [Posts in the Series](#posts-in-the-series)
@@ -72,47 +74,6 @@ properties which are added as additional form inputs when a specific type is cho
 ## Translate Plugin Support
 
 Starting from 1.5.0 version Blog Taxonomy supports [Winter Translate](https://octobercms.com/plugin/winter-translate) plugin when it's installed. All tag and series fields could be translated.
-
-## Migration from Other Plugins
-
-Starting from 1.12.0 version Blog Taxonomy supports migration from other plugins. Supported plugins are: [BlogSeries]
-(https://github.com/PascalKleindienst/october-blogseries-extension).
-
-The migration is done via console command:
-
-```php artisan blogtaxonomy:migrate PKleindienst.BlogSeries```
-
-Use `-h` or `--help` to get usage help.
-
-Migration example output:
-
-```bash
-**************************************************
-*     Migration from PKleindienst.BlogSeries     *
-**************************************************
-
-Migrating series
-2 series found
-Series "Series 1" => Blog Taxonomy Series "Series 1" (#3)
-Series "Series 2" => Blog Taxonomy Series "Series 2" (#4)
-All series have been migrated
-
-Migrating related series
-Relation "#4" => "#3" added
-Relation "#3" => "#4" added
-Related series have been migrated
-
-
- Do you want to assign newly created series to posts (already assigned Blog Taxonomy series will be overwritten) (yes/no) [no]:
- > yes
-
-Migrating series assigned to posts
-Series "#3" has been assigned to a post
-Series "#4" has been assigned to a post
-Migrated series has been assigned
-
-Migration from PKleindienst.BlogSeries finished
-```
 
 ## Implementing Frontend Pages
 

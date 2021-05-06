@@ -40,7 +40,7 @@ class Series extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext(Plugin::REQUIRED_PLUGIN_RAINLAB_BLOG, 'blog', 'series');
+        BackendMenu::setContext(Plugin::REQUIRED_PLUGIN_WINTER_BLOG, 'blog', 'series');
     }
 
     /**

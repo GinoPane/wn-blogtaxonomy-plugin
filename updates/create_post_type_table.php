@@ -76,14 +76,14 @@ class CreatePostTypeTable extends Migration
      */
     private function dropPostTypes()
     {
-        Schema::table('rainlab_blog_posts', static function ($table) {
+        Schema::table('winter_blog_posts', static function ($table) {
             $table->dropForeign([PostType::TABLE_NAME . '_id']);
 
             $table->dropColumn(PostType::TABLE_NAME. '_attributes');
         });
 
-        if (Schema::hasColumn('rainlab_blog_posts', PostType::TABLE_NAME . '_id')) {
-            Schema::table('rainlab_blog_posts', static function ($table) {
+        if (Schema::hasColumn('winter_blog_posts', PostType::TABLE_NAME . '_id')) {
+            Schema::table('winter_blog_posts', static function ($table) {
                 $table->dropColumn(PostType::TABLE_NAME . '_id');
             });
         }
@@ -111,7 +111,7 @@ class CreatePostTypeTable extends Migration
                 }
             );
 
-            Schema::table('rainlab_blog_posts', function ($table) {
+            Schema::table('winter_blog_posts', function ($table) {
                 $table->integer(PostType::TABLE_NAME . '_id')->unsigned()->nullable()->default(null);
                 $table->foreign(PostType::TABLE_NAME . '_id')->references('id')->on(PostType::TABLE_NAME)->onDelete('cascade');
 

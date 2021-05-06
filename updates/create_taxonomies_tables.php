@@ -53,12 +53,12 @@ class CreateTaxonomiesTables extends Migration
      */
     private function dropSeries()
     {
-        Schema::table('rainlab_blog_posts', static function ($table) {
+        Schema::table('winter_blog_posts', static function ($table) {
             $table->dropForeign([Series::TABLE_NAME . '_id']);
         });
 
-        if (Schema::hasColumn('rainlab_blog_posts', Series::TABLE_NAME . '_id')) {
-            Schema::table('rainlab_blog_posts', static function ($table) {
+        if (Schema::hasColumn('winter_blog_posts', Series::TABLE_NAME . '_id')) {
+            Schema::table('winter_blog_posts', static function ($table) {
                 $table->dropColumn(Series::TABLE_NAME . '_id');
             });
         }
@@ -95,7 +95,7 @@ class CreateTaxonomiesTables extends Migration
                     $table->integer('post_id')->unsigned()->nullable()->default(null);
                     $table->index(['tag_id', 'post_id']);
                     $table->foreign('tag_id')->references('id')->on(Tag::TABLE_NAME)->onDelete('cascade');
-                    $table->foreign('post_id')->references('id')->on('rainlab_blog_posts')->onDelete('cascade');
+                    $table->foreign('post_id')->references('id')->on('winter_blog_posts')->onDelete('cascade');
                 }
             );
         }
@@ -120,7 +120,7 @@ class CreateTaxonomiesTables extends Migration
                 }
             );
 
-            Schema::table('rainlab_blog_posts', function ($table) {
+            Schema::table('winter_blog_posts', function ($table) {
                 $table->integer(Series::TABLE_NAME . '_id')->unsigned()->nullable()->default(null);
                 $table->foreign(Series::TABLE_NAME . '_id')->references('id')->on(Series::TABLE_NAME)->onDelete('cascade');
             });

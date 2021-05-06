@@ -26,7 +26,6 @@ use Winter\Blog\Models\Category as CategoryModel;
 use GinoPane\BlogTaxonomy\Components\SeriesPosts;
 use GinoPane\BlogTaxonomy\Components\RelatedPosts;
 use GinoPane\BlogTaxonomy\Components\RelatedSeries;
-use GinoPane\BlogTaxonomy\Console\MigrateFromPlugin;
 use Winter\Blog\Controllers\Posts as PostsController;
 use GinoPane\BlogTaxonomy\Components\SeriesNavigation;
 use Winter\Blog\Controllers\Categories as CategoriesController;
@@ -42,7 +41,7 @@ class Plugin extends PluginBase
 
     const DIRECTORY_KEY = 'ginopane/blogtaxonomy';
 
-    const REQUIRED_PLUGIN_RAINLAB_BLOG = 'Winter.Blog';
+    const REQUIRED_PLUGIN_WINTER_BLOG = 'Winter.Blog';
 
     const DEFAULT_ICON = 'icon-sitemap';
 
@@ -92,11 +91,6 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function register()
-    {
-        $this->registerConsoleCommand(MigrateFromPlugin::NAME, MigrateFromPlugin::class);
-    }
-
     /**
      * Boot method, called right before the request route
      */
@@ -134,12 +128,12 @@ class Plugin extends PluginBase
     {
         // Extend the navigation
         Event::listen('backend.menu.extendItems', function ($manager) {
-            $manager->addSideMenuItems(self::REQUIRED_PLUGIN_RAINLAB_BLOG, 'blog', [
+            $manager->addSideMenuItems(self::REQUIRED_PLUGIN_WINTER_BLOG, 'blog', [
                 'series' => [
                     'label' => self::LOCALIZATION_KEY . 'navigation.sidebar.series',
                     'icon' => 'icon-list-alt',
                     'code' => 'series',
-                    'owner' => self::REQUIRED_PLUGIN_RAINLAB_BLOG,
+                    'owner' => self::REQUIRED_PLUGIN_WINTER_BLOG,
                     'url' => Backend::url(self::DIRECTORY_KEY . '/series')
                 ],
 
@@ -147,18 +141,18 @@ class Plugin extends PluginBase
                     'label' => self::LOCALIZATION_KEY . 'navigation.sidebar.tags',
                     'icon'  => 'icon-tags',
                     'code'  => 'tags',
-                    'owner' => self::REQUIRED_PLUGIN_RAINLAB_BLOG,
+                    'owner' => self::REQUIRED_PLUGIN_WINTER_BLOG,
                     'url'   => Backend::url(self::DIRECTORY_KEY . '/tags')
                 ]
             ]);
 
             if ($this->getSettings()->postTypesEnabled()) {
-                $manager->addSideMenuItems(self::REQUIRED_PLUGIN_RAINLAB_BLOG, 'blog', [
+                $manager->addSideMenuItems(self::REQUIRED_PLUGIN_WINTER_BLOG, 'blog', [
                     'post_types' => [
                         'label' => self::LOCALIZATION_KEY . 'navigation.sidebar.post_types',
                         'icon'  => 'icon-cog',
                         'code'  => 'post_types',
-                        'owner' => self::REQUIRED_PLUGIN_RAINLAB_BLOG,
+                        'owner' => self::REQUIRED_PLUGIN_WINTER_BLOG,
                         'url'   => Backend::url(self::DIRECTORY_KEY . '/posttypes')
                     ]
                 ]);

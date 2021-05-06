@@ -2,14 +2,14 @@
 
 namespace GinoPane\BlogTaxonomy\Controllers;
 
-use Backend\Behaviors\RelationController;
-use Flash;
-use BackendMenu;
 use Backend\Classes\Controller;
-use GinoPane\BlogTaxonomy\Models\Tag;
+use Backend\Facades\BackendMenu;
 use GinoPane\BlogTaxonomy\Plugin;
+use GinoPane\BlogTaxonomy\Models\Tag;
 use Backend\Behaviors\FormController;
 use Backend\Behaviors\ListController;
+use Winter\Storm\Support\Facades\Flash;
+use Backend\Behaviors\RelationController;
 
 /**
  * Class Tags
@@ -45,7 +45,7 @@ class Tags extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext(Plugin::REQUIRED_PLUGIN_RAINLAB_BLOG, 'blog', 'tags');
+        BackendMenu::setContext(Plugin::REQUIRED_PLUGIN_WINTER_BLOG, 'blog', 'tags');
     }
 
     /**

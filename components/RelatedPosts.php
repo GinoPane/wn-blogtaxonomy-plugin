@@ -215,7 +215,7 @@ class RelatedPosts extends ComponentAbstract
                                 from `%1$s`
                                 where
                                 `%1$s`.`%2$s_type` = \'Winter\Blog\Models\Post\'
-                                and `%1$s`.`%2$s_id` = `rainlab_blog_posts`.`id`
+                                and `%1$s`.`%2$s_id` = `winter_blog_posts`.`id`
                                 and `%1$s`.`tag_id` in (\'%3$s\')
                             )',
                             Tag::PIVOT_TABLE,
