@@ -1,3 +1,6 @@
+3.5.0:
+  - Migrate to Winter CMS
+
 3.0.5:
   - Make group-by query conditional for the abstract model
 

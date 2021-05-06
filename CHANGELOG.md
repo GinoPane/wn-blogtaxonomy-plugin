@@ -16,6 +16,10 @@ Types of changes
 
 ## [Unreleased]
 
+## 3.5.0 - 2021-05-06
+
+### Migrated to Winter CMS
+
 ## 3.0.5 - 2021-05-04
 
 ### Fixed
@@ -297,4 +301,4 @@ Types of changes
 ### Features
 * The initial release of Blog Taxonomy.
 
-[Unreleased]: https://github.com/GinoPane/oc-blogtaxonomy-plugin/compare/v3.0.4...HEAD
+[Unreleased]: https://github.com/GinoPane/wn-blogtaxonomy-plugin/compare/v3.5.0...HEAD
