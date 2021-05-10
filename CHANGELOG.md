@@ -16,6 +16,12 @@ Types of changes
 
 ## [Unreleased]
 
+## 3.5.1 - 2021-05-10
+
+### Fixed
+
+* Fix wrong Validator class being extended
+
 ## 3.5.0 - 2021-05-06
 
 ### Migrated to Winter CMS

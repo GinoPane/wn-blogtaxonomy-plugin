@@ -1,3 +1,6 @@
+3.5.1:
+  - Fix wrong Validator class being extended
+
 3.5.0:
   - Migrate to Winter CMS
 
