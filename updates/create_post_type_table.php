@@ -76,15 +76,17 @@ class CreatePostTypeTable extends Migration
      */
     private function dropPostTypes()
     {
-        Schema::table('winter_blog_posts', static function ($table) {
-            $table->dropForeign([PostType::TABLE_NAME . '_id']);
-
-            $table->dropColumn(PostType::TABLE_NAME. '_attributes');
-        });
-
         if (Schema::hasColumn('winter_blog_posts', PostType::TABLE_NAME . '_id')) {
             Schema::table('winter_blog_posts', static function ($table) {
+                $table->dropForeign([PostType::TABLE_NAME . '_id']);
+
                 $table->dropColumn(PostType::TABLE_NAME . '_id');
+            });
+        }
+
+        if (Schema::hasColumn('winter_blog_posts', PostType::TABLE_NAME . '_attributes')) {
+            Schema::table('winter_blog_posts', static function ($table) {
+                $table->dropColumn(PostType::TABLE_NAME . '_attributes');
             });
         }
 

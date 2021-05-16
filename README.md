@@ -41,6 +41,19 @@ The plugin can be installed via Composer.
 composer require ginopane/wn-blogtaxonomy-plugin
 ```
 
+After that you need to make sure that the plugin will be installed into Winter CMS itself. To do so, you need to run 
+either
+
+```shell
+php artizan winter:up
+```
+
+or
+
+```shell
+php artizan plugin:refresh GinoPane.BlogTaxonomy
+```
+
 ## Changes to Original Blog Plugin
 
 ### Categories
