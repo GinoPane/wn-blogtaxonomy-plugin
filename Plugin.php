@@ -274,7 +274,7 @@ class Plugin extends PluginBase
 
             $categoriesConfig = $this->transformPostCategoriesIntoTaglist($form, $tab);
 
-            $form->addSecondaryTabFields([
+            $form->addTabFields([
                 'categories' => $categoriesConfig,
                 'tags' => [
                     'label' => self::LOCALIZATION_KEY . 'form.tags.label',
@@ -431,7 +431,7 @@ class Plugin extends PluginBase
     {
         $tab = self::LOCALIZATION_KEY . 'navigation.tab.type';
 
-        $form->addSecondaryTabFields([
+        $form->addTabFields([
             'post_type' => [
                 'label' => self::LOCALIZATION_KEY . 'form.post_types.label',
                 'tab' => $tab,
@@ -528,7 +528,7 @@ class Plugin extends PluginBase
             }
         }
 
-        $form->addSecondaryTabFields([
+        $form->addTabFields([
             PostType::TABLE_NAME . '_attributes' => $typeAttributes
         ]);
     }
